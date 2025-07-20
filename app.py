@@ -160,7 +160,7 @@ if st.button("Analyze URL"):
                         stat, p = ks_2samp(scaled[:, i], baseline[:, i])
                         drift_flags.append(p < 0.05)
                     if any(drift_flags):
-                        st.warning("⚠️ Feature drift detected! Model may need retraining.")
+                        st.warning("⚠️ Feature drift detected!.")
                     else:
                         st.info("✅ No feature drift detected.")
                 except Exception as e:
